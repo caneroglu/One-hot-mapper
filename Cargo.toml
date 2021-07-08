@@ -1,0 +1,24 @@
+[package]
+name = "project_one_hot_mapper"
+version = "0.1.0"
+authors = ["caner"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "main_lib"
+
+[dependencies]
+structopt = "0.3.21"
+rand = "0.8.3"
+rand_chacha = "0.3.0"
+rand_hc = "0.3.0"
+rand_xoshiro = "0.6.0"
+pretty_env_logger = "0.3"
+log = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
